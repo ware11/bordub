@@ -1,0 +1,2972 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local bordub_lobby = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local loadhere = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local TextLabel_2 = Instance.new("TextLabel")
+local loadcode = Instance.new("TextButton")
+local UIGradient_2 = Instance.new("UIGradient")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+
+--Properties:
+
+bordub_lobby.Name = "bordub_lobby"
+bordub_lobby.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+bordub_lobby.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+bordub_lobby.ResetOnSpawn = false
+
+Frame.Parent = bordub_lobby
+Frame.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Frame.Position = UDim2.new(0, 550, 0, 333)
+Frame.Size = UDim2.new(0, 599, 0, 355)
+
+UICorner.CornerRadius = UDim.new(0, 3)
+UICorner.Parent = Frame
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 150, 0, 50)
+TextLabel.Font = Enum.Font.Oswald
+TextLabel.Text = "Bor"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 57.000
+
+loadhere.Name = "loadhere"
+loadhere.Parent = Frame
+loadhere.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+loadhere.BackgroundTransparency = 1.000
+loadhere.BorderSizePixel = 0
+loadhere.Position = UDim2.new(0, 200, 0, 135)
+loadhere.Size = UDim2.new(0, 200, 0, 50)
+loadhere.Visible = false
+loadhere.Font = Enum.Font.Oswald
+loadhere.Text = "click here to load"
+loadhere.TextColor3 = Color3.fromRGB(255, 255, 255)
+loadhere.TextSize = 57.000
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0, 0, 0, 55)
+Frame_2.Size = UDim2.new(0, 599, 0, 3)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.00, Color3.fromRGB(224, 224, 224)), ColorSequenceKeypoint.new(0.96, Color3.fromRGB(149, 149, 149)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Offset = Vector2.new(1, 0.899999976)
+UIGradient.Rotation = 90
+UIGradient.Parent = Frame
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0, 415, 0, 66)
+TextLabel_2.Size = UDim2.new(0, 150, 0, 50)
+TextLabel_2.Font = Enum.Font.Oswald
+TextLabel_2.Text = "load_fx"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 57.000
+TextLabel_2.TextWrapped = true
+
+loadcode.Name = "load code"
+loadcode.Parent = Frame
+loadcode.Active = false
+loadcode.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+loadcode.Position = UDim2.new(0, 200, 0, 199)
+loadcode.Size = UDim2.new(0, 200, 0, 50)
+loadcode.Visible = false
+loadcode.Font = Enum.Font.Oswald
+loadcode.Text = "LOAD"
+loadcode.TextColor3 = Color3.fromRGB(0, 0, 0)
+loadcode.TextSize = 43.000
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.00, Color3.fromRGB(224, 224, 224)), ColorSequenceKeypoint.new(0.96, Color3.fromRGB(149, 149, 149)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient_2.Offset = Vector2.new(1, 0.899999976)
+UIGradient_2.Rotation = 90
+UIGradient_2.Parent = loadcode
+
+UICorner_2.CornerRadius = UDim.new(0, 3)
+UICorner_2.Parent = loadcode
+
+TextLabel_3.Parent = Frame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0, 50, 0, 0)
+TextLabel_3.Size = UDim2.new(0, 150, 0, 50)
+TextLabel_3.Font = Enum.Font.Oswald
+TextLabel_3.Text = "dub"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 57.000
+
+TextLabel_4.Parent = Frame
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0, 50, 0, 66)
+TextLabel_4.Size = UDim2.new(0, 150, 0, 50)
+TextLabel_4.Font = Enum.Font.Oswald
+TextLabel_4.Text = "if it doesnt load you needa get whitelisted"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 57.000
+TextLabel_4.TextWrapped = true
+
+-- Scripts:
+
+local function ZMJMH_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (8); -- // The speed of the UI darg.
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+end
+coroutine.wrap(ZMJMH_fake_script)()
+local function OFQLVI_fake_script() -- TextLabel_2.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_2)
+
+	r = script.Parent
+	g = script.Parent.Parent["load code"]
+	b = script.Parent.Parent:WaitForChild("fx")
+	
+	wait()
+	r.Text = "Loading..."
+	b:play()
+	wait(1)
+	r.Text = "Loading.."
+	b:play()
+	wait(1)
+	r.Text = "Loading."
+	b:play()
+	wait(1)
+	r.Text = "Done."
+	b:play()
+	g.Visible = true
+end
+coroutine.wrap(OFQLVI_fake_script)()
+local function NKAF_fake_script() -- loadcode.LocalScript 
+	local script = Instance.new('LocalScript', loadcode)
+
+	local click = script.Parent
+	
+	click.MouseButton1Down:Connect(function()
+		local effect = Instance.new("Sound", script.Parent)
+		effect.SoundId = "rbxassetid://4526034708"
+		effect.Volume = 10
+		effect:play()
+	end)
+end
+coroutine.wrap(NKAF_fake_script)()
+local function WCCUKE_fake_script() -- loadcode.LocalScript 
+	local script = Instance.new('LocalScript', loadcode)
+
+	g=script.Parent
+	
+	g.MouseButton1Down:Connect(function()
+		wait()
+		script.Parent.Parent.Parent.Enabled = false
+		wait()
+		-- Gui to Lua
+		-- Version: 3.2
+	
+		-- Instances:
+	
+		local bordub = Instance.new("ScreenGui")
+		local bar = Instance.new("Frame")
+		local UICorner = Instance.new("UICorner")
+		local Frame = Instance.new("Frame")
+		local UICorner_2 = Instance.new("UICorner")
+		local TextLabel = Instance.new("TextLabel")
+		local TextLabel_2 = Instance.new("TextLabel")
+		local EXIT = Instance.new("TextButton")
+		local UICorner_3 = Instance.new("UICorner")
+		local Frame_2 = Instance.new("Frame")
+		local mainui = Instance.new("Frame")
+		local UICorner_4 = Instance.new("UICorner")
+		local Frame_3 = Instance.new("Frame")
+		local Frame_4 = Instance.new("Frame")
+		local Lowhold = Instance.new("TextButton")
+		local Frame_5 = Instance.new("Frame")
+		local UICorner_5 = Instance.new("UICorner")
+		local Backpack = Instance.new("TextButton")
+		local Frame_6 = Instance.new("Frame")
+		local UICorner_6 = Instance.new("UICorner")
+		local Shoulder = Instance.new("TextButton")
+		local Frame_7 = Instance.new("Frame")
+		local UICorner_7 = Instance.new("UICorner")
+		local NormalHold = Instance.new("TextButton")
+		local Frame_8 = Instance.new("Frame")
+		local UICorner_8 = Instance.new("UICorner")
+		local Grips = Instance.new("TextLabel")
+		local Frame_9 = Instance.new("Frame")
+		local UICorner_9 = Instance.new("UICorner")
+		local Vis = Instance.new("TextButton")
+		local Frame_10 = Instance.new("Frame")
+		local UICorner_10 = Instance.new("UICorner")
+		local EquipItems = Instance.new("TextButton")
+		local Frame_11 = Instance.new("Frame")
+		local UICorner_11 = Instance.new("UICorner")
+		local Gtools = Instance.new("TextButton")
+		local Frame_12 = Instance.new("Frame")
+		local UICorner_12 = Instance.new("UICorner")
+		local Demesh = Instance.new("TextButton")
+		local Frame_13 = Instance.new("Frame")
+		local UICorner_13 = Instance.new("UICorner")
+		local Dupe = Instance.new("TextButton")
+		local Frame_14 = Instance.new("Frame")
+		local UICorner_14 = Instance.new("UICorner")
+		local ID = Instance.new("TextBox")
+		local Frame_15 = Instance.new("Frame")
+		local UICorner_15 = Instance.new("UICorner")
+		local Play = Instance.new("TextButton")
+		local Frame_16 = Instance.new("Frame")
+		local UICorner_16 = Instance.new("UICorner")
+		local Amount = Instance.new("TextBox")
+		local Frame_17 = Instance.new("Frame")
+		local UICorner_17 = Instance.new("UICorner")
+		local Frame_18 = Instance.new("Frame")
+		local Frame_19 = Instance.new("Frame")
+		local fIX = Instance.new("TextButton")
+		local Frame_20 = Instance.new("Frame")
+		local UICorner_18 = Instance.new("UICorner")
+		local Presets = Instance.new("ScrollingFrame")
+		local Frame_21 = Instance.new("Frame")
+		local Ring = Instance.new("TextButton")
+		local Frame_22 = Instance.new("Frame")
+		local UICorner_19 = Instance.new("UICorner")
+		local UIListLayout = Instance.new("UIListLayout")
+		local Worm = Instance.new("TextButton")
+		local Frame_23 = Instance.new("Frame")
+		local UICorner_20 = Instance.new("UICorner")
+		local Line = Instance.new("TextButton")
+		local Frame_24 = Instance.new("Frame")
+		local UICorner_21 = Instance.new("UICorner")
+		local Wall = Instance.new("TextButton")
+		local Frame_25 = Instance.new("Frame")
+		local UICorner_22 = Instance.new("UICorner")
+		local Normal = Instance.new("TextButton")
+		local Frame_26 = Instance.new("Frame")
+		local UICorner_23 = Instance.new("UICorner")
+		local Frame_27 = Instance.new("Frame")
+		local settings = Instance.new("Frame")
+		local offset = Instance.new("TextBox")
+		local Frame_28 = Instance.new("Frame")
+		local UICorner_24 = Instance.new("UICorner")
+		local TextLabel_3 = Instance.new("TextLabel")
+		local angular = Instance.new("TextBox")
+		local Frame_29 = Instance.new("Frame")
+		local UICorner_25 = Instance.new("UICorner")
+		local TextLabel_4 = Instance.new("TextLabel")
+		local speed = Instance.new("TextBox")
+		local Frame_30 = Instance.new("Frame")
+		local UICorner_26 = Instance.new("UICorner")
+		local TextLabel_5 = Instance.new("TextLabel")
+		local Frame_31 = Instance.new("Frame")
+	
+		--Properties:
+	
+		bordub.Name = "bordub!"
+		bordub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+		bordub.Enabled = false
+		bordub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		bordub.ResetOnSpawn = false
+	
+		bar.Name = "bar"
+		bar.Parent = bordub
+		bar.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+		bar.Position = UDim2.new(0, 250, 0, 255)
+		bar.Size = UDim2.new(0, 255, 0, 37)
+	
+		UICorner.CornerRadius = UDim.new(0, 3)
+		UICorner.Parent = bar
+	
+		Frame.Parent = bar
+		Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame.BorderSizePixel = 0
+		Frame.Size = UDim2.new(0, 255, 0, 4)
+	
+		UICorner_2.CornerRadius = UDim.new(0, 3)
+		UICorner_2.Parent = Frame
+	
+		TextLabel.Parent = Frame
+		TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.BackgroundTransparency = 1.000
+		TextLabel.Size = UDim2.new(0, 99, 0, 35)
+		TextLabel.Font = Enum.Font.Oswald
+		TextLabel.Text = "Bor"
+		TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel.TextScaled = true
+		TextLabel.TextSize = 43.000
+		TextLabel.TextWrapped = true
+	
+		TextLabel_2.Parent = Frame
+		TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_2.BackgroundTransparency = 1.000
+		TextLabel_2.Position = UDim2.new(0, 35, 0, 0)
+		TextLabel_2.Size = UDim2.new(0, 99, 0, 35)
+		TextLabel_2.Font = Enum.Font.Oswald
+		TextLabel_2.Text = "Dub"
+		TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_2.TextScaled = true
+		TextLabel_2.TextSize = 43.000
+		TextLabel_2.TextWrapped = true
+	
+		EXIT.Name = "EXIT"
+		EXIT.Parent = bar
+		EXIT.BackgroundColor3 = Color3.fromRGB(255, 72, 0)
+		EXIT.Position = UDim2.new(0, 225, 0, 9)
+		EXIT.Size = UDim2.new(0, 15, 0, 15)
+		EXIT.Font = Enum.Font.SourceSans
+		EXIT.Text = ""
+		EXIT.TextColor3 = Color3.fromRGB(0, 0, 0)
+		EXIT.TextSize = 14.000
+	
+		UICorner_3.CornerRadius = UDim.new(0, 3)
+		UICorner_3.Parent = EXIT
+	
+		Frame_2.Parent = bar
+		Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_2.BackgroundTransparency = 0.500
+		Frame_2.BorderSizePixel = 0
+		Frame_2.Position = UDim2.new(0, 0, 0, 35)
+		Frame_2.Size = UDim2.new(0, 255, 0, 2)
+	
+		mainui.Name = "mainui"
+		mainui.Parent = bordub
+		mainui.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+		mainui.Position = UDim2.new(0, 250, 0, 295)
+		mainui.Size = UDim2.new(0, 1225, 0, 300)
+	
+		UICorner_4.CornerRadius = UDim.new(0, 3)
+		UICorner_4.Parent = mainui
+	
+		Frame_3.Parent = mainui
+		Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_3.BackgroundTransparency = 0.500
+		Frame_3.BorderSizePixel = 0
+		Frame_3.Position = UDim2.new(0, 145, 0, 5)
+		Frame_3.Size = UDim2.new(0, 3, 0, 295)
+	
+		Frame_4.Parent = mainui
+		Frame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_4.BackgroundTransparency = 0.500
+		Frame_4.BorderSizePixel = 0
+		Frame_4.Position = UDim2.new(0, 455, 0, 5)
+		Frame_4.Size = UDim2.new(0, 3, 0, 295)
+	
+		Lowhold.Name = "Lowhold"
+		Lowhold.Parent = mainui
+		Lowhold.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		Lowhold.Position = UDim2.new(0, 10, 0, 15)
+		Lowhold.Size = UDim2.new(0, 125, 0, 50)
+		Lowhold.Font = Enum.Font.Oswald
+		Lowhold.Text = "Lowhold"
+		Lowhold.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Lowhold.TextSize = 33.000
+		Lowhold.TextWrapped = true
+	
+		Frame_5.Parent = Lowhold
+		Frame_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_5.BackgroundTransparency = 0.500
+		Frame_5.BorderSizePixel = 0
+		Frame_5.Size = UDim2.new(0, 125, 0, 2)
+	
+		UICorner_5.CornerRadius = UDim.new(0, 3)
+		UICorner_5.Parent = Lowhold
+	
+		Backpack.Name = "Backpack"
+		Backpack.Parent = mainui
+		Backpack.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		Backpack.Position = UDim2.new(0, 10, 0, 75)
+		Backpack.Size = UDim2.new(0, 125, 0, 50)
+		Backpack.Font = Enum.Font.Oswald
+		Backpack.Text = "Backpack"
+		Backpack.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Backpack.TextSize = 33.000
+		Backpack.TextWrapped = true
+	
+		Frame_6.Parent = Backpack
+		Frame_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_6.BackgroundTransparency = 0.500
+		Frame_6.BorderSizePixel = 0
+		Frame_6.Size = UDim2.new(0, 125, 0, 2)
+	
+		UICorner_6.CornerRadius = UDim.new(0, 3)
+		UICorner_6.Parent = Backpack
+	
+		Shoulder.Name = "Shoulder"
+		Shoulder.Parent = mainui
+		Shoulder.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		Shoulder.Position = UDim2.new(0, 10, 0, 135)
+		Shoulder.Size = UDim2.new(0, 125, 0, 50)
+		Shoulder.Font = Enum.Font.Oswald
+		Shoulder.Text = "Shoulder"
+		Shoulder.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Shoulder.TextSize = 33.000
+		Shoulder.TextWrapped = true
+	
+		Frame_7.Parent = Shoulder
+		Frame_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_7.BackgroundTransparency = 0.500
+		Frame_7.BorderSizePixel = 0
+		Frame_7.Size = UDim2.new(0, 125, 0, 2)
+	
+		UICorner_7.CornerRadius = UDim.new(0, 3)
+		UICorner_7.Parent = Shoulder
+	
+		NormalHold.Name = "Normal Hold"
+		NormalHold.Parent = mainui
+		NormalHold.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		NormalHold.Position = UDim2.new(0, 10, 0, 195)
+		NormalHold.Size = UDim2.new(0, 125, 0, 50)
+		NormalHold.Font = Enum.Font.Oswald
+		NormalHold.Text = "Normal Hold"
+		NormalHold.TextColor3 = Color3.fromRGB(0, 0, 0)
+		NormalHold.TextSize = 33.000
+		NormalHold.TextWrapped = true
+	
+		Frame_8.Parent = NormalHold
+		Frame_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_8.BackgroundTransparency = 0.500
+		Frame_8.BorderSizePixel = 0
+		Frame_8.Size = UDim2.new(0, 125, 0, 2)
+	
+		UICorner_8.CornerRadius = UDim.new(0, 3)
+		UICorner_8.Parent = NormalHold
+	
+		Grips.Name = "Grips"
+		Grips.Parent = mainui
+		Grips.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		Grips.Position = UDim2.new(0, 10, 0, 253)
+		Grips.Size = UDim2.new(0, 125, 0, 40)
+		Grips.Font = Enum.Font.Oswald
+		Grips.Text = "Grips"
+		Grips.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Grips.TextScaled = true
+		Grips.TextSize = 14.000
+		Grips.TextWrapped = true
+	
+		Frame_9.Parent = Grips
+		Frame_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_9.BackgroundTransparency = 0.500
+		Frame_9.BorderSizePixel = 0
+		Frame_9.Size = UDim2.new(0, 125, 0, 2)
+	
+		UICorner_9.CornerRadius = UDim.new(0, 3)
+		UICorner_9.Parent = Grips
+	
+		Vis.Name = "Vis"
+		Vis.Parent = mainui
+		Vis.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		Vis.Position = UDim2.new(0, 175, 0, 15)
+		Vis.Size = UDim2.new(0, 255, 0, 50)
+		Vis.Font = Enum.Font.Oswald
+		Vis.Text = "Visualise"
+		Vis.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Vis.TextSize = 33.000
+		Vis.TextWrapped = true
+	
+		Frame_10.Parent = Vis
+		Frame_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_10.BackgroundTransparency = 0.500
+		Frame_10.BorderSizePixel = 0
+		Frame_10.Size = UDim2.new(0, 255, 0, 2)
+	
+		UICorner_10.CornerRadius = UDim.new(0, 3)
+		UICorner_10.Parent = Vis
+	
+		EquipItems.Name = "Equip Items"
+		EquipItems.Parent = mainui
+		EquipItems.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		EquipItems.Position = UDim2.new(0, 175, 0, 75)
+		EquipItems.Size = UDim2.new(0, 255, 0, 50)
+		EquipItems.Font = Enum.Font.Oswald
+		EquipItems.Text = "Etools"
+		EquipItems.TextColor3 = Color3.fromRGB(0, 0, 0)
+		EquipItems.TextSize = 33.000
+		EquipItems.TextWrapped = true
+	
+		Frame_11.Parent = EquipItems
+		Frame_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_11.BackgroundTransparency = 0.500
+		Frame_11.BorderSizePixel = 0
+		Frame_11.Size = UDim2.new(0, 255, 0, 2)
+	
+		UICorner_11.CornerRadius = UDim.new(0, 3)
+		UICorner_11.Parent = EquipItems
+	
+		Gtools.Name = "Gtools"
+		Gtools.Parent = mainui
+		Gtools.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		Gtools.Position = UDim2.new(0, 175, 0, 205)
+		Gtools.Size = UDim2.new(0, 255, 0, 50)
+		Gtools.Font = Enum.Font.Oswald
+		Gtools.Text = "Gtools"
+		Gtools.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Gtools.TextSize = 33.000
+		Gtools.TextWrapped = true
+	
+		Frame_12.Parent = Gtools
+		Frame_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_12.BackgroundTransparency = 0.500
+		Frame_12.BorderSizePixel = 0
+		Frame_12.Size = UDim2.new(0, 255, 0, 2)
+	
+		UICorner_12.CornerRadius = UDim.new(0, 3)
+		UICorner_12.Parent = Gtools
+	
+		Demesh.Name = "Demesh"
+		Demesh.Parent = mainui
+		Demesh.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		Demesh.Position = UDim2.new(0, 175, 0, 137)
+		Demesh.Size = UDim2.new(0, 255, 0, 50)
+		Demesh.Font = Enum.Font.Oswald
+		Demesh.Text = "Demesh"
+		Demesh.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Demesh.TextSize = 33.000
+		Demesh.TextWrapped = true
+	
+		Frame_13.Parent = Demesh
+		Frame_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_13.BackgroundTransparency = 0.500
+		Frame_13.BorderSizePixel = 0
+		Frame_13.Size = UDim2.new(0, 255, 0, 2)
+	
+		UICorner_13.CornerRadius = UDim.new(0, 3)
+		UICorner_13.Parent = Demesh
+	
+		Dupe.Name = "Dupe"
+		Dupe.Parent = mainui
+		Dupe.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		Dupe.Position = UDim2.new(0, 480, 0, 15)
+		Dupe.Size = UDim2.new(0, 200, 0, 50)
+		Dupe.Font = Enum.Font.Oswald
+		Dupe.Text = "Dupe"
+		Dupe.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Dupe.TextSize = 33.000
+		Dupe.TextWrapped = true
+	
+		Frame_14.Parent = Dupe
+		Frame_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_14.BackgroundTransparency = 0.500
+		Frame_14.BorderSizePixel = 0
+		Frame_14.Size = UDim2.new(0, 200, 0, 2)
+	
+		UICorner_14.CornerRadius = UDim.new(0, 3)
+		UICorner_14.Parent = Dupe
+	
+		ID.Name = "ID"
+		ID.Parent = mainui
+		ID.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		ID.Position = UDim2.new(0, 480, 0, 205)
+		ID.Size = UDim2.new(0, 200, 0, 50)
+		ID.Font = Enum.Font.Oswald
+		ID.Text = "ID"
+		ID.TextColor3 = Color3.fromRGB(0, 0, 0)
+		ID.TextScaled = true
+		ID.TextSize = 51.000
+		ID.TextWrapped = true
+	
+		Frame_15.Parent = ID
+		Frame_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_15.BackgroundTransparency = 0.500
+		Frame_15.BorderSizePixel = 0
+		Frame_15.Size = UDim2.new(0, 200, 0, 2)
+	
+		UICorner_15.CornerRadius = UDim.new(0, 3)
+		UICorner_15.Parent = ID
+	
+		Play.Name = "Play"
+		Play.Parent = mainui
+		Play.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		Play.Position = UDim2.new(0, 480, 0, 140)
+		Play.Size = UDim2.new(0, 200, 0, 50)
+		Play.Font = Enum.Font.Oswald
+		Play.Text = "Play"
+		Play.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Play.TextSize = 33.000
+		Play.TextWrapped = true
+	
+		Frame_16.Parent = Play
+		Frame_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_16.BackgroundTransparency = 0.500
+		Frame_16.BorderSizePixel = 0
+		Frame_16.Size = UDim2.new(0, 200, 0, 2)
+	
+		UICorner_16.CornerRadius = UDim.new(0, 3)
+		UICorner_16.Parent = Play
+	
+		Amount.Name = "Amount"
+		Amount.Parent = mainui
+		Amount.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		Amount.Position = UDim2.new(0, 480, 0, 77)
+		Amount.Size = UDim2.new(0, 200, 0, 50)
+		Amount.Font = Enum.Font.Oswald
+		Amount.Text = "Amount"
+		Amount.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Amount.TextScaled = true
+		Amount.TextSize = 51.000
+		Amount.TextWrapped = true
+	
+		Frame_17.Parent = Amount
+		Frame_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_17.BackgroundTransparency = 0.500
+		Frame_17.BorderSizePixel = 0
+		Frame_17.Size = UDim2.new(0, 200, 0, 2)
+	
+		UICorner_17.CornerRadius = UDim.new(0, 3)
+		UICorner_17.Parent = Amount
+	
+		Frame_18.Parent = mainui
+		Frame_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_18.BackgroundTransparency = 0.500
+		Frame_18.BorderSizePixel = 0
+		Frame_18.Position = UDim2.new(0, 0, 0, 300)
+		Frame_18.Size = UDim2.new(0, 1225, 0, 2)
+	
+		Frame_19.Parent = mainui
+		Frame_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_19.BackgroundTransparency = 0.500
+		Frame_19.BorderSizePixel = 0
+		Frame_19.Position = UDim2.new(0, 700, 0, 5)
+		Frame_19.Size = UDim2.new(0, 3, 0, 295)
+	
+		fIX.Name = "fIX"
+		fIX.Parent = mainui
+		fIX.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		fIX.Position = UDim2.new(0, 725, 0, 15)
+		fIX.Size = UDim2.new(0, 150, 0, 50)
+		fIX.Font = Enum.Font.Oswald
+		fIX.Text = "Fix bug"
+		fIX.TextColor3 = Color3.fromRGB(0, 0, 0)
+		fIX.TextSize = 33.000
+		fIX.TextWrapped = true
+	
+		Frame_20.Parent = fIX
+		Frame_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_20.BackgroundTransparency = 0.500
+		Frame_20.BorderSizePixel = 0
+		Frame_20.Size = UDim2.new(0, 150, 0, 2)
+	
+		UICorner_18.CornerRadius = UDim.new(0, 3)
+		UICorner_18.Parent = fIX
+	
+		Presets.Name = "Presets"
+		Presets.Parent = mainui
+		Presets.Active = true
+		Presets.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		Presets.BorderSizePixel = 0
+		Presets.Position = UDim2.new(0, 725, 0, 70)
+		Presets.Size = UDim2.new(0, 150, 0, 190)
+	
+		Frame_21.Parent = Presets
+		Frame_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_21.BackgroundTransparency = 0.500
+		Frame_21.BorderSizePixel = 0
+		Frame_21.Size = UDim2.new(0, 150, 0, 2)
+	
+		Ring.Name = "Ring"
+		Ring.Parent = Presets
+		Ring.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+		Ring.Position = UDim2.new(0, 175, 0, 15)
+		Ring.Size = UDim2.new(0, 150, 0, 30)
+		Ring.Font = Enum.Font.Oswald
+		Ring.Text = "Ring"
+		Ring.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Ring.TextSize = 33.000
+		Ring.TextWrapped = true
+	
+		Frame_22.Parent = Ring
+		Frame_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_22.BackgroundTransparency = 0.500
+		Frame_22.BorderSizePixel = 0
+		Frame_22.Size = UDim2.new(0, 255, 0, 2)
+	
+		UICorner_19.CornerRadius = UDim.new(0, 99)
+		UICorner_19.Parent = Ring
+	
+		UIListLayout.Parent = Presets
+		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	
+		Worm.Name = "Worm"
+		Worm.Parent = Presets
+		Worm.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+		Worm.Position = UDim2.new(0, 175, 0, 15)
+		Worm.Size = UDim2.new(0, 150, 0, 30)
+		Worm.Font = Enum.Font.Oswald
+		Worm.Text = "Worm"
+		Worm.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Worm.TextSize = 33.000
+		Worm.TextWrapped = true
+	
+		Frame_23.Parent = Worm
+		Frame_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_23.BackgroundTransparency = 0.500
+		Frame_23.BorderSizePixel = 0
+		Frame_23.Size = UDim2.new(0, 255, 0, 2)
+	
+		UICorner_20.CornerRadius = UDim.new(0, 99)
+		UICorner_20.Parent = Worm
+	
+		Line.Name = "Line"
+		Line.Parent = Presets
+		Line.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+		Line.Position = UDim2.new(0, 175, 0, 15)
+		Line.Size = UDim2.new(0, 150, 0, 30)
+		Line.Font = Enum.Font.Oswald
+		Line.Text = "Line"
+		Line.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Line.TextSize = 33.000
+		Line.TextWrapped = true
+	
+		Frame_24.Parent = Line
+		Frame_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_24.BackgroundTransparency = 0.500
+		Frame_24.BorderSizePixel = 0
+		Frame_24.Size = UDim2.new(0, 255, 0, 2)
+	
+		UICorner_21.CornerRadius = UDim.new(0, 99)
+		UICorner_21.Parent = Line
+	
+		Wall.Name = "Wall"
+		Wall.Parent = Presets
+		Wall.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+		Wall.Position = UDim2.new(0, 175, 0, 15)
+		Wall.Size = UDim2.new(0, 150, 0, 30)
+		Wall.Font = Enum.Font.Oswald
+		Wall.Text = "Wall"
+		Wall.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Wall.TextSize = 33.000
+		Wall.TextWrapped = true
+	
+		Frame_25.Parent = Wall
+		Frame_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_25.BackgroundTransparency = 0.500
+		Frame_25.BorderSizePixel = 0
+		Frame_25.Size = UDim2.new(0, 255, 0, 2)
+	
+		UICorner_22.CornerRadius = UDim.new(0, 99)
+		UICorner_22.Parent = Wall
+	
+		Normal.Name = "Normal"
+		Normal.Parent = Presets
+		Normal.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+		Normal.Position = UDim2.new(0, 175, 0, 15)
+		Normal.Size = UDim2.new(0, 150, 0, 30)
+		Normal.Font = Enum.Font.Oswald
+		Normal.Text = "Normal"
+		Normal.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Normal.TextSize = 33.000
+		Normal.TextWrapped = true
+	
+		Frame_26.Parent = Normal
+		Frame_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_26.BackgroundTransparency = 0.500
+		Frame_26.BorderSizePixel = 0
+		Frame_26.Size = UDim2.new(0, 255, 0, 2)
+	
+		UICorner_23.CornerRadius = UDim.new(0, 99)
+		UICorner_23.Parent = Normal
+	
+		Frame_27.Parent = mainui
+		Frame_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_27.BackgroundTransparency = 0.500
+		Frame_27.BorderSizePixel = 0
+		Frame_27.Position = UDim2.new(0, 900, 0, 5)
+		Frame_27.Size = UDim2.new(0, 3, 0, 295)
+	
+		settings.Name = "settings"
+		settings.Parent = mainui
+		settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		settings.BackgroundTransparency = 1.000
+		settings.Position = UDim2.new(0, 0, 0, 30)
+		settings.Size = UDim2.new(0, 100, 0, 100)
+	
+		offset.Name = "offset"
+		offset.Parent = settings
+		offset.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		offset.Position = UDim2.new(0, 970, 0, 15)
+		offset.Size = UDim2.new(0, 200, 0, 50)
+		offset.Font = Enum.Font.Oswald
+		offset.Text = ">offset"
+		offset.TextColor3 = Color3.fromRGB(0, 0, 0)
+		offset.TextScaled = true
+		offset.TextSize = 51.000
+		offset.TextWrapped = true
+	
+		Frame_28.Parent = offset
+		Frame_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_28.BackgroundTransparency = 0.500
+		Frame_28.BorderSizePixel = 0
+		Frame_28.Size = UDim2.new(0, 200, 0, 2)
+	
+		UICorner_24.CornerRadius = UDim.new(0, 3)
+		UICorner_24.Parent = offset
+	
+		TextLabel_3.Parent = offset
+		TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_3.BackgroundTransparency = 1.000
+		TextLabel_3.Position = UDim2.new(0, 0, 0, -15)
+		TextLabel_3.Size = UDim2.new(0, 200, 0, 10)
+		TextLabel_3.Font = Enum.Font.Oswald
+		TextLabel_3.Text = ">offset"
+		TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_3.TextSize = 24.000
+		TextLabel_3.TextWrapped = true
+	
+		angular.Name = "angular"
+		angular.Parent = settings
+		angular.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		angular.Position = UDim2.new(0, 970, 0, 80)
+		angular.Size = UDim2.new(0, 200, 0, 50)
+		angular.Font = Enum.Font.Oswald
+		angular.Text = ">angular"
+		angular.TextColor3 = Color3.fromRGB(0, 0, 0)
+		angular.TextScaled = true
+		angular.TextSize = 51.000
+		angular.TextWrapped = true
+	
+		Frame_29.Parent = angular
+		Frame_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_29.BackgroundTransparency = 0.500
+		Frame_29.BorderSizePixel = 0
+		Frame_29.Size = UDim2.new(0, 200, 0, 2)
+	
+		UICorner_25.CornerRadius = UDim.new(0, 3)
+		UICorner_25.Parent = angular
+	
+		TextLabel_4.Parent = angular
+		TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_4.BackgroundTransparency = 1.000
+		TextLabel_4.Position = UDim2.new(0, 0, 0, -20)
+		TextLabel_4.Size = UDim2.new(0, 200, 0, 20)
+		TextLabel_4.Font = Enum.Font.Oswald
+		TextLabel_4.Text = ">angular"
+		TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_4.TextScaled = true
+		TextLabel_4.TextSize = 14.000
+		TextLabel_4.TextWrapped = true
+	
+		speed.Name = "speed"
+		speed.Parent = settings
+		speed.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		speed.Position = UDim2.new(0, 970, 0, 150)
+		speed.Size = UDim2.new(0, 200, 0, 50)
+		speed.Font = Enum.Font.Oswald
+		speed.Text = ">speed"
+		speed.TextColor3 = Color3.fromRGB(0, 0, 0)
+		speed.TextScaled = true
+		speed.TextSize = 51.000
+		speed.TextWrapped = true
+	
+		Frame_30.Parent = speed
+		Frame_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_30.BackgroundTransparency = 0.500
+		Frame_30.BorderSizePixel = 0
+		Frame_30.Size = UDim2.new(0, 200, 0, 2)
+	
+		UICorner_26.CornerRadius = UDim.new(0, 3)
+		UICorner_26.Parent = speed
+	
+		TextLabel_5.Parent = speed
+		TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_5.BackgroundTransparency = 1.000
+		TextLabel_5.Position = UDim2.new(0, 0, 0, -20)
+		TextLabel_5.Size = UDim2.new(0, 200, 0, 20)
+		TextLabel_5.Font = Enum.Font.Oswald
+		TextLabel_5.Text = ">speed"
+		TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_5.TextScaled = true
+		TextLabel_5.TextSize = 14.000
+		TextLabel_5.TextWrapped = true
+	
+		Frame_31.Parent = mainui
+		Frame_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_31.BackgroundTransparency = 0.500
+		Frame_31.BorderSizePixel = 0
+		Frame_31.Size = UDim2.new(0, 1225, 0, 2)
+	
+		-- Scripts:
+	
+		local function ZADIE_fake_script() -- EXIT.LocalScript 
+			local script = Instance.new('LocalScript', EXIT)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://4526034708"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(ZADIE_fake_script)()
+		local function QCDB_fake_script() -- EXIT.LocalScript 
+			local script = Instance.new('LocalScript', EXIT)
+	
+			local click = script.Parent
+			local main_ui = script.Parent.Parent.Parent.mainui
+	
+			click.MouseButton1Down:Connect(function()
+				main_ui.Visible  = not main_ui.Visible
+			end)
+		end
+		coroutine.wrap(QCDB_fake_script)()
+		local function SHWYY_fake_script() -- bar.LocalScript 
+			local script = Instance.new('LocalScript', bar)
+	
+			local UserInputService = game:GetService("UserInputService")
+			local runService = (game:GetService("RunService"));
+	
+			local gui = script.Parent
+	
+			local dragging
+			local dragInput
+			local dragStart
+			local startPos
+	
+			function Lerp(a, b, m)
+				return a + (b - a) * m
+			end;
+	
+			local lastMousePos
+			local lastGoalPos
+			local DRAG_SPEED = (8); -- // The speed of the UI darg.
+			function Update(dt)
+				if not (startPos) then return end;
+				if not (dragging) and (lastGoalPos) then
+					gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+					return 
+				end;
+	
+				local delta = (lastMousePos - UserInputService:GetMouseLocation())
+				local xGoal = (startPos.X.Offset - delta.X);
+				local yGoal = (startPos.Y.Offset - delta.Y);
+				lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+				gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+			end;
+	
+			gui.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+					dragging = true
+					dragStart = input.Position
+					startPos = gui.Position
+					lastMousePos = UserInputService:GetMouseLocation()
+	
+					input.Changed:Connect(function()
+						if input.UserInputState == Enum.UserInputState.End then
+							dragging = false
+						end
+					end)
+				end
+			end)
+	
+			gui.InputChanged:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+					dragInput = input
+				end
+			end)
+	
+			runService.Heartbeat:Connect(Update)
+		end
+		coroutine.wrap(SHWYY_fake_script)()
+		local function YKPU_fake_script() -- Lowhold.GripPos 
+			local script = Instance.new('LocalScript', Lowhold)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local plr = game:GetService("Players").LocalPlayer
+	
+				for _,t in pairs(plr.Backpack:GetChildren()) do
+					if t:IsA("Tool") and t:FindFirstChild("Handle") and t:FindFirstChild("Handle"):FindFirstChild("Sound") then
+						t.GripForward = Vector3.new(-0, -1, 0)
+						t.GripPos = Vector3.new(-0.007, 0.737, 0.091)
+						t.GripRight = Vector3.new(-0.024, 0, 1)
+						t.GripUp = Vector3.new(1, -0, 0.024)
+						t.Handle.Massless = true
+						t.Parent = plr.Character
+					end
+				end
+	
+				wait(.1)
+				local chr = plr.Character
+	
+				local Char = plr.Character
+				local hum = chr.Humanoid
+				wait()
+	
+				local hum = chr:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController")
+	
+				for i,v in next, hum:GetPlayingAnimationTracks() do
+					v:Stop()
+				end
+	
+			end)
+		end
+		coroutine.wrap(YKPU_fake_script)()
+		local function SLLX_fake_script() -- Lowhold.LocalScript 
+			local script = Instance.new('LocalScript', Lowhold)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(SLLX_fake_script)()
+		local function TTBF_fake_script() -- Backpack.GripPos 
+			local script = Instance.new('LocalScript', Backpack)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local plr = game:GetService("Players").LocalPlayer
+	
+				for _,t in pairs(plr.Backpack:GetChildren()) do
+					if t:IsA("Tool") and t:FindFirstChild("Handle") and t:FindFirstChild("Handle"):FindFirstChild("Sound") then
+						t.GripForward = Vector3.new(0.007, 0.01, 1)
+						t.GripPos = Vector3.new(-0.93, 1.118, 2.347)
+						t.GripRight = Vector3.new(-0.779, 0.627, -0)
+						t.GripUp = Vector3.new(0.627, 0.779, -0.012)
+						t.Handle.Massless = true
+						t.Parent = plr.Character
+					end
+				end
+	
+	
+	
+			end)
+		end
+		coroutine.wrap(TTBF_fake_script)()
+		local function BZTIAG_fake_script() -- Backpack.LocalScript 
+			local script = Instance.new('LocalScript', Backpack)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(BZTIAG_fake_script)()
+		local function DGMQ_fake_script() -- Shoulder.GripPos 
+			local script = Instance.new('LocalScript', Shoulder)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local plr = game:GetService("Players").LocalPlayer
+	
+				for _,t in pairs(plr.Backpack:GetChildren()) do
+					if t:IsA("Tool") and t:FindFirstChild("Handle") and t:FindFirstChild("Handle"):FindFirstChild("Sound") then
+						t.GripForward = Vector3.new(-0, -1, 0)
+						t.GripPos = Vector3.new(-0.026, -2.844, 0.091)
+						t.GripRight = Vector3.new(0.028, -0, 1)
+						t.GripUp = Vector3.new(1, 0, -0.028)
+						t.Handle.Massless = true
+						t.Parent = plr.Character
+					end
+				end
+	
+				wait(.1)
+				local chr = plr.Character
+	
+				local Char = plr.Character
+				local hum = chr.Humanoid
+				wait()
+	
+				local hum = chr:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController")
+	
+				for i,v in next, hum:GetPlayingAnimationTracks() do
+					v:Stop()
+				end
+	
+			end)
+		end
+		coroutine.wrap(DGMQ_fake_script)()
+		local function UFIA_fake_script() -- Shoulder.LocalScript 
+			local script = Instance.new('LocalScript', Shoulder)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(UFIA_fake_script)()
+		local function YUYU_fake_script() -- NormalHold.GripPos 
+			local script = Instance.new('LocalScript', NormalHold)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local plr = game:GetService("Players").LocalPlayer
+	
+				for _,t in pairs(plr.Backpack:GetChildren()) do
+					if t:IsA("Tool") and t:FindFirstChild("Handle") and t:FindFirstChild("Handle"):FindFirstChild("Sound") then
+						t.GripForward = Vector3.new(1, 0, 0)
+						t.GripPos = Vector3.new(1, -1.25, 0)
+						t.GripRight = Vector3.new(0, 0, 1)
+						t.GripUp = Vector3.new(0, 1, 0)
+						t.Handle.Massless = true
+						t.Parent = plr.Character
+					end
+				end
+	
+	
+			end)
+		end
+		coroutine.wrap(YUYU_fake_script)()
+		local function TVRYZCT_fake_script() -- NormalHold.LocalScript 
+			local script = Instance.new('LocalScript', NormalHold)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(TVRYZCT_fake_script)()
+		local function NKONS_fake_script() -- Vis.Vis_1 
+			local script = Instance.new('LocalScript', Vis)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				wait(1)
+				local plr = game:GetService("Players").LocalPlayer
+				local chr = plr.Character
+	
+				local Char = plr.Character
+				local hum = chr.Humanoid
+				local mov = {};
+				local mov2 = {};
+	
+				for i,v in next, chr:GetDescendants() do
+					if v:IsA("BasePart") and v.Name ~="Head" then
+						game:GetService("RunService").Heartbeat:connect(function()
+	
+	
+						end)
+					end
+				end
+	
+				function ftp(str)
+					local pt = {};
+					if str ~= 'me' and str ~= 'random' then
+						for i, v in pairs(game.Players:GetPlayers()) do
+							if v.Name:lower():find(str:lower()) then
+								table.insert(pt, v);
+							end
+						end
+					elseif str == 'me' then
+						table.insert(pt, plr);
+					elseif str == 'random' then
+						table.insert(pt, game.Players:GetPlayers()[math.random(1, #game.Players:GetPlayers())]);
+					end
+					return pt;
+				end
+	
+				for i, v in pairs(chr:GetDescendants()) do
+					if v:IsA("Tool") then
+						local b = v.Handle;
+						b.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0);
+						b.CanCollide = false;
+	
+						b:BreakJoints();
+	
+						for _, k in pairs(v:GetChildren()) do
+							if not k:IsA'SpecialMesh' and not k:IsA'Part' then
+	
+							end
+						end
+						local still = Instance.new('BodyAngularVelocity', b);
+						still.MaxTorque = Vector3.new(math.huge, math.huge, math.huge);
+						still.AngularVelocity = Vector3.new(0, 0, 0);
+						local align = Instance.new('AlignPosition', b);
+						align.MaxForce = 1000000; --1000000
+						align.MaxVelocity = math.huge;
+						align.RigidityEnabled = true;
+						align.ApplyAtCenterOfMass = false;
+						align.Responsiveness = 200;
+						local a0 = Instance.new('Attachment', b);
+						local a1 = Instance.new('Attachment', chr.HumanoidRootPart);
+						align.Attachment0 = a0;
+						align.Attachment1 = a1;
+						table.insert(mov, a1);
+						table.insert(mov2, still);
+					end
+				end
+	
+				local par = {};
+				for _, v in pairs(mov) do
+					local parr = Instance.new('Part', workspace);
+					parr.Anchored = true;
+					parr.Size = Vector3.new(1, 1, 1);
+					parr.Transparency = 1;
+					parr.CanCollide = false;
+					table.insert(par, parr);
+				end
+	
+				local rotx = 2;
+				local rotz = math.pi / 2;
+				local height = 1;
+				local heighti = 1;
+				local offset = tonumber(script.Parent.Parent.settings.offset.Text)
+				local speed = tonumber(script.Parent.Parent.settings.speed.Text)
+				local mode = 2;
+				local angular = Vector3.new(tonumber(script.Parent.Parent.settings.angular.Text));
+				local l = 1;
+				game['Run Service'].RenderStepped:Connect(function()
+					rotx = rotx + speed / 100;
+					rotz = rotz + speed / 100;
+					l = (l >= 360 and 1 or l + speed);
+	
+					for i, v in pairs(par) do
+						v.CFrame = CFrame.new(chr.HumanoidRootPart.Position) * CFrame.fromEulerAnglesXYZ(0, math.rad(l + (360 / #par) * i + speed), 0) * CFrame.new(offset, 0, 0);
+	
+					end
+	
+					if heighti == 1 then
+						height = height + speed / 100;
+					elseif heighti == 2 then
+						height = height - speed / 100;
+					end
+					if height > 2 then
+						heighti = 2;
+					end
+					if height < -1 then
+						heighti = 1;
+					end
+	
+					if mode == 1 then
+						for _, v in pairs(mov) do
+							v.Position = Vector3.new(math.sin(rotx) * offset, 0, math.sin(rotz) * offset);
+						end
+					elseif mode == 2 then
+						pcall(function()
+							local so = nil;
+							for k, b in pairs(chr:GetChildren()) do
+								if b:IsA'Tool' then
+									for h, j in pairs(b:GetDescendants()) do
+										if j:IsA'Sound' then
+											so = j;
+										end
+									end
+								end
+							end
+							if so ~= nil then
+								offset = so.PlaybackLoudness / 35;
+								speed = so.PlaybackLoudness / 250;
+								angular = Vector3.new(0, so.PlaybackLoudness / 75, 0);
+							end
+						end)
+						for i, v in pairs(mov) do
+							v.Position = Vector3.new(chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).X, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Y, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Z);
+						end
+					end
+					for _, v in pairs(mov2) do
+						v.AngularVelocity = angular;
+					end
+				end)
+	
+				wait()
+	
+				local hum = chr:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController")
+	
+				for i,v in next, hum:GetPlayingAnimationTracks() do
+					v:Stop()
+				end
+	
+	
+	
+	
+			end)
+		end
+		coroutine.wrap(NKONS_fake_script)()
+		local function OTSEGM_fake_script() -- Vis.gg 
+			local script = Instance.new('LocalScript', Vis)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				h = game.Players.LocalPlayer.Character.Humanoid
+				tracks = h:GetPlayingAnimationTracks()
+				for _,x in pairs(tracks)
+				do x:Play()
+				end
+	
+			end)
+		end
+		coroutine.wrap(OTSEGM_fake_script)()
+		local function HVSTAB_fake_script() -- Vis.LocalScript 
+			local script = Instance.new('LocalScript', Vis)
+	
+			script.Parent.MouseButton1Click:Connect(function()
+	
+				local Backpack=game.Players.LocalPlayer.Backpack
+				local lp=game.Players.LocalPlayer
+				local tosync=false
+				local tt=0
+				for i,v in pairs(Backpack:GetChildren()) do
+					if v:IsA("Tool") then
+						tt=tt+1
+					end
+				end
+				local t = {}
+				for i,v in pairs(Backpack:GetChildren()) do
+					if v:IsA("Tool") then
+						coroutine.wrap(function()
+							if v.Handle:FindFirstChildOfClass("Sound") then
+								v.Handle:FindFirstChildOfClass("Sound"):Destroy()
+							end
+							v.Parent=lp.Character
+							v:FindFirstChildOfClass("RemoteEvent"):FireServer("PlaySong",(script.Parent.Parent.ID.Text:gsub("%D+", "")))
+							repeat wait() until v.Handle:FindFirstChildOfClass("Sound")
+							repeat wait() until v.Handle:FindFirstChildOfClass("Sound").IsPlaying
+							v.Handle:FindFirstChildOfClass("Sound").Playing=false
+							table.insert(t,v)
+						end)()
+					end
+				end
+				repeat game:service'RunService'.Heartbeat:Wait() until #t==tt
+				wait(1)
+				for i,v in pairs(t) do
+					coroutine.wrap(function()
+						v.Handle:FindFirstChildOfClass("Sound").TimePosition=0
+						v.Handle:FindFirstChildOfClass("Sound").Playing=true
+					end)()
+				end
+				print("done")
+			end)
+	
+		end
+		coroutine.wrap(HVSTAB_fake_script)()
+		local function VHFYJQZ_fake_script() -- Vis.LocalScript 
+			local script = Instance.new('LocalScript', Vis)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(VHFYJQZ_fake_script)()
+		local function TYJPGAQ_fake_script() -- EquipItems.ettols 
+			local script = Instance.new('LocalScript', EquipItems)
+	
+			local click = script.Parent
+			local plr = game:GetService("Players").LocalPlayer
+			local chr = plr.Character
+	
+			click.MouseButton1Down:Connect(function()
+	
+				for i, v in pairs(plr.Backpack:GetDescendants()) do
+					if v:IsA("Tool") and v.Name == "BoomBox" or v.Name == "SuperFlyGoldBoombox" then
+						v.Parent = plr.Character
+					end
+				end	
+	
+			end)
+		end
+		coroutine.wrap(TYJPGAQ_fake_script)()
+		local function JRKKCJL_fake_script() -- EquipItems.LocalScript 
+			local script = Instance.new('LocalScript', EquipItems)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(JRKKCJL_fake_script)()
+		local function BZNH_fake_script() -- Gtools.ettols 
+			local script = Instance.new('LocalScript', Gtools)
+	
+			local plr = game.Players.LocalPlayer
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+	
+				local plr = game:GetService("Players").LocalPlayer
+				local charr = game:GetService("Players").LocalPlayer.Character
+				local players = game:GetService("Players"):GetPlayers()
+				local gameid = game.PlaceId
+	
+				script.Parent.MouseButton1Down:Connect(function()
+					for _,v in pairs(game.workspace:GetChildren()) do
+						if v:IsA("Tool") then
+							v.Handle.CFrame = plr.Character.Head.CFrame
+						end
+					end
+	
+	
+				end)
+	
+			end)
+		end
+		coroutine.wrap(BZNH_fake_script)()
+		local function QOFHEGI_fake_script() -- Gtools.LocalScript 
+			local script = Instance.new('LocalScript', Gtools)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(QOFHEGI_fake_script)()
+		local function OHYMQB_fake_script() -- Demesh.ettols 
+			local script = Instance.new('LocalScript', Demesh)
+	
+			local plr = game.Players.LocalPlayer
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+	
+				for i, v in pairs(plr.Character:GetDescendants()) do
+					if v:IsA("Tool") and v.Name == "BoomBox" or v.Name == "SuperFlyGoldBoombox" then
+						v.Handle:FindFirstChild("Mesh"):Destroy()
+					end
+				end
+	
+			end)
+		end
+		coroutine.wrap(OHYMQB_fake_script)()
+		local function JRRMKP_fake_script() -- Demesh.LocalScript 
+			local script = Instance.new('LocalScript', Demesh)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(JRRMKP_fake_script)()
+		local function NCMQPT_fake_script() -- Dupe.LocalScript 
+			local script = Instance.new('LocalScript', Dupe)
+	
+			script.Parent.MouseButton1Down:Connect(function()
+				for i=1,tonumber(script.Parent.Parent.Amount.Text) or 1 do
+					char=game.Players.LocalPlayer.Character
+					game.Players.LocalPlayer.Character=nil
+					game.Players.LocalPlayer.Character=char
+					char.Animate:Destroy()
+					char.HumanoidRootPart.CFrame=CFrame.new(0,9999,0)
+					wait(.1)
+					char.HumanoidRootPart.Anchored=true
+					for i,v in pairs(char:GetChildren()) do
+						if v:IsA("Tool") then
+							v.Parent=game.Players.LocalPlayer.Backpack
+						end
+					end
+					wait(game.Players.RespawnTime-0.3)
+					local t = {}
+					for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+						v.Parent=char
+						v.Parent=workspace
+						t[i]=v
+					end
+					char.Humanoid:Destroy()
+					game.Players.LocalPlayer.Character=nil
+					game.Players.LocalPlayer.CharacterAdded:Wait()
+					char=game.Players.LocalPlayer.Character
+					char:WaitForChild("Humanoid")
+					wait(.1)
+					for i,v in pairs(t) do
+						char.Humanoid:EquipTool(v)
+					end
+					wait(.3)
+				end	
+			end)
+		end
+		coroutine.wrap(NCMQPT_fake_script)()
+		local function BAPIGN_fake_script() -- Dupe.LocalScript 
+			local script = Instance.new('LocalScript', Dupe)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(BAPIGN_fake_script)()
+		local function BOTQ_fake_script() -- Play.LocalScript 
+			local script = Instance.new('LocalScript', Play)
+	
+			script.Parent.MouseButton1Click:Connect(function()
+				local Backpack=game.Players.LocalPlayer.Backpack
+				local lp=game.Players.LocalPlayer
+				local tosync=false
+				local tt=0
+				for i,v in pairs(Backpack:GetChildren()) do
+					if v:IsA("Tool") then
+						tt=tt+1
+					end
+				end
+				local t = {}
+				for i,v in pairs(Backpack:GetChildren()) do
+					if v:IsA("Tool") then
+						coroutine.wrap(function()
+							if v.Handle:FindFirstChildOfClass("Sound") then
+								v.Handle:FindFirstChildOfClass("Sound"):Destroy()
+							end
+							v.Parent=lp.Character
+							v:FindFirstChildOfClass("RemoteEvent"):FireServer("PlaySong",(script.Parent.Parent.ID.Text:gsub("%D+", "")))
+							repeat wait() until v.Handle:FindFirstChildOfClass("Sound")
+							repeat wait() until v.Handle:FindFirstChildOfClass("Sound").IsPlaying
+							v.Handle:FindFirstChildOfClass("Sound").Playing=false
+							table.insert(t,v)
+						end)()
+					end
+				end
+				repeat game:service'RunService'.Heartbeat:Wait() until #t==tt
+				wait(1)
+				for i,v in pairs(t) do
+					coroutine.wrap(function()
+						v.Handle:FindFirstChildOfClass("Sound").TimePosition=0
+						v.Handle:FindFirstChildOfClass("Sound").Playing=true
+					end)()
+				end
+				print("done")
+			end)
+	
+		end
+		coroutine.wrap(BOTQ_fake_script)()
+		local function XABYPR_fake_script() -- Play.LocalScript 
+			local script = Instance.new('LocalScript', Play)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(XABYPR_fake_script)()
+		local function KGYZNQ_fake_script() -- fIX.ettols 
+			local script = Instance.new('LocalScript', fIX)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Up:Connect(function()
+				local services = {"workspace", "ReplicatedFirst", "ReplicatedStorage", "ServerScriptService", "ServerStorage", "StarterGui", "StarterPack", "StarterPlayer", "Teams"}
+				for _,service in pairs(services) do
+					if game[service] then
+						for i,v in pairs(game[service]:GetDescendants()) do
+							if v:IsA("Attachment") or v:IsA("AlignPosition") or v:IsA("BodyAngularVelocity") then
+								v:Destroy()
+							end
+							if i%100 == 0 then
+								wait()
+							end
+						end
+					end
+				end
+			end)
+		end
+		coroutine.wrap(KGYZNQ_fake_script)()
+		local function REUDL_fake_script() -- fIX.LocalScript 
+			local script = Instance.new('LocalScript', fIX)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(REUDL_fake_script)()
+		local function EQLGKRD_fake_script() -- Ring.gg 
+			local script = Instance.new('LocalScript', Ring)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				h = game.Players.LocalPlayer.Character.Humanoid
+				tracks = h:GetPlayingAnimationTracks()
+				for _,x in pairs(tracks)
+				do x:Play()
+				end
+	
+			end)
+		end
+		coroutine.wrap(EQLGKRD_fake_script)()
+		local function NMTJLR_fake_script() -- Ring.LocalScript 
+			local script = Instance.new('LocalScript', Ring)
+	
+			script.Parent.MouseButton1Click:Connect(function()
+	
+				local Backpack=game.Players.LocalPlayer.Backpack
+				local lp=game.Players.LocalPlayer
+				local tosync=false
+				local tt=0
+				for i,v in pairs(Backpack:GetChildren()) do
+					if v:IsA("Tool") then
+						tt=tt+1
+					end
+				end
+				local t = {}
+				for i,v in pairs(Backpack:GetChildren()) do
+					if v:IsA("Tool") then
+						coroutine.wrap(function()
+							if v.Handle:FindFirstChildOfClass("Sound") then
+								v.Handle:FindFirstChildOfClass("Sound"):Destroy()
+							end
+							v.Parent=lp.Character
+							v:FindFirstChildOfClass("RemoteEvent"):FireServer("PlaySong",(script.Parent.Parent.Parent.ID.Text:gsub("%D+", "")))
+							repeat wait() until v.Handle:FindFirstChildOfClass("Sound")
+							repeat wait() until v.Handle:FindFirstChildOfClass("Sound").IsPlaying
+							v.Handle:FindFirstChildOfClass("Sound").Playing=false
+							table.insert(t,v)
+						end)()
+					end
+				end
+				repeat game:service'RunService'.Heartbeat:Wait() until #t==tt
+				wait(1)
+				for i,v in pairs(t) do
+					coroutine.wrap(function()
+						v.Handle:FindFirstChildOfClass("Sound").TimePosition=0
+						v.Handle:FindFirstChildOfClass("Sound").Playing=true
+					end)()
+				end
+				print("done")
+			end)
+	
+		end
+		coroutine.wrap(NMTJLR_fake_script)()
+		local function ZXWE_fake_script() -- Ring.LocalScript 
+			local script = Instance.new('LocalScript', Ring)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(ZXWE_fake_script)()
+		local function SDQQ_fake_script() -- Ring.Vis_1 
+			local script = Instance.new('LocalScript', Ring)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				wait(1)
+				local plr = game:GetService("Players").LocalPlayer
+				local chr = plr.Character
+	
+				local Char = plr.Character
+				local hum = chr.Humanoid
+				local mov = {};
+				local mov2 = {};
+	
+				for i,v in next, chr:GetDescendants() do
+					if v:IsA("BasePart") and v.Name ~="Head" then
+						game:GetService("RunService").Heartbeat:connect(function()
+	
+	
+						end)
+					end
+				end
+	
+				function ftp(str)
+					local pt = {};
+					if str ~= 'me' and str ~= 'random' then
+						for i, v in pairs(game.Players:GetPlayers()) do
+							if v.Name:lower():find(str:lower()) then
+								table.insert(pt, v);
+							end
+						end
+					elseif str == 'me' then
+						table.insert(pt, plr);
+					elseif str == 'random' then
+						table.insert(pt, game.Players:GetPlayers()[math.random(1, #game.Players:GetPlayers())]);
+					end
+					return pt;
+				end
+	
+				for i, v in pairs(chr:GetDescendants()) do
+					if v:IsA("Tool") then
+						local b = v.Handle;
+						b.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0);
+						b.CanCollide = false;
+	
+						b:BreakJoints();
+	
+						for _, k in pairs(v:GetChildren()) do
+							if not k:IsA'SpecialMesh' and not k:IsA'Part' then
+	
+							end
+						end
+						local still = Instance.new('BodyAngularVelocity', b);
+						still.MaxTorque = Vector3.new(math.huge, math.huge, math.huge);
+						still.AngularVelocity = Vector3.new(0, 0, 0);
+						local align = Instance.new('AlignPosition', b);
+						align.MaxForce = 1000000; --1000000
+						align.MaxVelocity = math.huge;
+						align.RigidityEnabled = true;
+						align.ApplyAtCenterOfMass = false;
+						align.Responsiveness = 200;
+						local a0 = Instance.new('Attachment', b);
+						local a1 = Instance.new('Attachment', chr.HumanoidRootPart);
+						align.Attachment0 = a0;
+						align.Attachment1 = a1;
+						table.insert(mov, a1);
+						table.insert(mov2, still);
+					end
+				end
+	
+				local par = {};
+				for _, v in pairs(mov) do
+					local parr = Instance.new('Part', workspace);
+					parr.Anchored = true;
+					parr.Size = Vector3.new(1, 1, 1);
+					parr.Transparency = 1;
+					parr.CanCollide = false;
+					table.insert(par, parr);
+				end
+	
+				local rotx = 2;
+				local rotz = math.pi / 2;
+				local height = 1;
+				local heighti = 1;
+				local offset = 9;
+				local speed = 5;
+				local mode = 2;
+				local angular = Vector3.new(0, 5, 0);
+				local l = 1;
+				game['Run Service'].RenderStepped:Connect(function()
+					rotx = rotx + speed / 100;
+					rotz = rotz + speed / 100;
+					l = (l >= 360 and 1 or l + speed);
+	
+					for i, v in pairs(par) do
+						v.CFrame = CFrame.new(chr.HumanoidRootPart.Position) * CFrame.fromEulerAnglesXYZ(0, math.rad(l + (360 / #par) * i + speed), 0) * CFrame.new(offset, 0, 0);
+	
+					end
+	
+					if heighti == 1 then
+						height = height + speed / 100;
+					elseif heighti == 2 then
+						height = height - speed / 100;
+					end
+					if height > 2 then
+						heighti = 2;
+					end
+					if height < -1 then
+						heighti = 1;
+					end
+	
+					if mode == 1 then
+						for _, v in pairs(mov) do
+							v.Position = Vector3.new(math.sin(rotx) * offset, 0, math.sin(rotz) * offset);
+						end
+					elseif mode == 2 then
+						pcall(function()
+							local so = nil;
+							for k, b in pairs(chr:GetChildren()) do
+								if b:IsA'Tool' then
+									for h, j in pairs(b:GetDescendants()) do
+										if j:IsA'Sound' then
+											so = j;
+										end
+									end
+								end
+							end
+							if so ~= nil then
+								offset = so.PlaybackLoudness / 35;
+								speed = so.PlaybackLoudness / 250;
+								angular = Vector3.new(0, so.PlaybackLoudness / 75, 0);
+							end
+						end)
+						for i, v in pairs(mov) do
+							v.Position = Vector3.new(chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).X, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).X, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Z);
+						end
+					end
+					for _, v in pairs(mov2) do
+						v.AngularVelocity = angular;
+					end
+				end)
+	
+				wait()
+	
+				local hum = chr:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController")
+	
+				for i,v in next, hum:GetPlayingAnimationTracks() do
+					v:Stop()
+				end
+	
+	
+	
+	
+			end)
+		end
+		coroutine.wrap(SDQQ_fake_script)()
+		local function IVGDFF_fake_script() -- Worm.gg 
+			local script = Instance.new('LocalScript', Worm)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				h = game.Players.LocalPlayer.Character.Humanoid
+				tracks = h:GetPlayingAnimationTracks()
+				for _,x in pairs(tracks)
+				do x:Play()
+				end
+	
+			end)
+		end
+		coroutine.wrap(IVGDFF_fake_script)()
+		local function ZWFUVMG_fake_script() -- Worm.Vis_1 
+			local script = Instance.new('LocalScript', Worm)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				wait(1)
+				local plr = game:GetService("Players").LocalPlayer
+				local chr = plr.Character
+	
+				local Char = plr.Character
+				local hum = chr.Humanoid
+				local mov = {};
+				local mov2 = {};
+	
+				for i,v in next, chr:GetDescendants() do
+					if v:IsA("BasePart") and v.Name ~="Head" then
+						game:GetService("RunService").Heartbeat:connect(function()
+	
+	
+						end)
+					end
+				end
+	
+				function ftp(str)
+					local pt = {};
+					if str ~= 'me' and str ~= 'random' then
+						for i, v in pairs(game.Players:GetPlayers()) do
+							if v.Name:lower():find(str:lower()) then
+								table.insert(pt, v);
+							end
+						end
+					elseif str == 'me' then
+						table.insert(pt, plr);
+					elseif str == 'random' then
+						table.insert(pt, game.Players:GetPlayers()[math.random(1, #game.Players:GetPlayers())]);
+					end
+					return pt;
+				end
+	
+				for i, v in pairs(chr:GetDescendants()) do
+					if v:IsA("Tool") then
+						local b = v.Handle;
+						b.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0);
+						b.CanCollide = false;
+	
+						b:BreakJoints();
+	
+						for _, k in pairs(v:GetChildren()) do
+							if not k:IsA'SpecialMesh' and not k:IsA'Part' then
+	
+							end
+						end
+						local still = Instance.new('BodyAngularVelocity', b);
+						still.MaxTorque = Vector3.new(math.huge, math.huge, math.huge);
+						still.AngularVelocity = Vector3.new(0, 0, 0);
+						local align = Instance.new('AlignPosition', b);
+						align.MaxForce = 1000000; --1000000
+						align.MaxVelocity = math.huge;
+						align.RigidityEnabled = true;
+						align.ApplyAtCenterOfMass = false;
+						align.Responsiveness = 200;
+						local a0 = Instance.new('Attachment', b);
+						local a1 = Instance.new('Attachment', chr.HumanoidRootPart);
+						align.Attachment0 = a0;
+						align.Attachment1 = a1;
+						table.insert(mov, a1);
+						table.insert(mov2, still);
+					end
+				end
+	
+				local par = {};
+				for _, v in pairs(mov) do
+					local parr = Instance.new('Part', workspace);
+					parr.Anchored = true;
+					parr.Size = Vector3.new(1, 1, 1);
+					parr.Transparency = 1;
+					parr.CanCollide = false;
+					table.insert(par, parr);
+				end
+	
+				local rotx = 2;
+				local rotz = math.pi / 2;
+				local height = 1;
+				local heighti = 1;
+				local offset = 9;
+				local speed = 1;
+				local mode = 2;
+				local angular = Vector3.new(0, 5, 0);
+				local l = 1;
+				game['Run Service'].RenderStepped:Connect(function()
+					rotx = rotx + speed / 100;
+					rotz = rotz + speed / 100;
+					l = (l >= 360 and 1 or l + speed);
+	
+					for i, v in pairs(par) do
+						v.CFrame = CFrame.new(chr.HumanoidRootPart.Position) * CFrame.fromEulerAnglesXYZ(0, math.rad(l + (69 / #par) * i + speed), 0) * CFrame.new(offset, 0, 0);
+	
+					end
+	
+					if heighti == 1 then
+						height = height + speed / 100;
+					elseif heighti == 2 then
+						height = height - speed / 100;
+					end
+					if height > 2 then
+						heighti = 2;
+					end
+					if height < -1 then
+						heighti = 1;
+					end
+	
+					if mode == 1 then
+						for _, v in pairs(mov) do
+							v.Position = Vector3.new(math.sin(rotx) * offset, 0, math.sin(rotz) * offset);
+						end
+					elseif mode == 2 then
+						pcall(function()
+							local so = nil;
+							for k, b in pairs(chr:GetChildren()) do
+								if b:IsA'Tool' then
+									for h, j in pairs(b:GetDescendants()) do
+										if j:IsA'Sound' then
+											so = j;
+										end
+									end
+								end
+							end
+							if so ~= nil then
+								offset = so.PlaybackLoudness / 35;
+								speed = so.PlaybackLoudness / 250;
+								angular = Vector3.new(0, so.PlaybackLoudness / 75, 0);
+							end
+						end)
+						for i, v in pairs(mov) do
+							v.Position = Vector3.new(chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Z, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).X, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).X);
+						end
+					end
+					for _, v in pairs(mov2) do
+						v.AngularVelocity = angular;
+					end
+				end)
+	
+				wait()
+	
+				local hum = chr:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController")
+	
+				for i,v in next, hum:GetPlayingAnimationTracks() do
+					v:Stop()
+				end
+	
+	
+	
+	
+			end)
+		end
+		coroutine.wrap(ZWFUVMG_fake_script)()
+		local function HXSYNON_fake_script() -- Worm.LocalScript 
+			local script = Instance.new('LocalScript', Worm)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(HXSYNON_fake_script)()
+		local function PXTEP_fake_script() -- Worm.LocalScript 
+			local script = Instance.new('LocalScript', Worm)
+	
+			script.Parent.MouseButton1Click:Connect(function()
+	
+				local Backpack=game.Players.LocalPlayer.Backpack
+				local lp=game.Players.LocalPlayer
+				local tosync=false
+				local tt=0
+				for i,v in pairs(Backpack:GetChildren()) do
+					if v:IsA("Tool") then
+						tt=tt+1
+					end
+				end
+				local t = {}
+				for i,v in pairs(Backpack:GetChildren()) do
+					if v:IsA("Tool") then
+						coroutine.wrap(function()
+							if v.Handle:FindFirstChildOfClass("Sound") then
+								v.Handle:FindFirstChildOfClass("Sound"):Destroy()
+							end
+							v.Parent=lp.Character
+							v:FindFirstChildOfClass("RemoteEvent"):FireServer("PlaySong",(script.Parent.Parent.Parent.ID.Text:gsub("%D+", "")))
+							repeat wait() until v.Handle:FindFirstChildOfClass("Sound")
+							repeat wait() until v.Handle:FindFirstChildOfClass("Sound").IsPlaying
+							v.Handle:FindFirstChildOfClass("Sound").Playing=false
+							table.insert(t,v)
+						end)()
+					end
+				end
+				repeat game:service'RunService'.Heartbeat:Wait() until #t==tt
+				wait(1)
+				for i,v in pairs(t) do
+					coroutine.wrap(function()
+						v.Handle:FindFirstChildOfClass("Sound").TimePosition=0
+						v.Handle:FindFirstChildOfClass("Sound").Playing=true
+					end)()
+				end
+				print("done")
+			end)
+	
+		end
+		coroutine.wrap(PXTEP_fake_script)()
+		local function NZCHGA_fake_script() -- Line.Vis_1 
+			local script = Instance.new('LocalScript', Line)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				wait(1)
+				local plr = game:GetService("Players").LocalPlayer
+				local chr = plr.Character
+	
+				local Char = plr.Character
+				local hum = chr.Humanoid
+				local mov = {};
+				local mov2 = {};
+	
+				for i,v in next, chr:GetDescendants() do
+					if v:IsA("BasePart") and v.Name ~="Head" then
+						game:GetService("RunService").Heartbeat:connect(function()
+	
+	
+						end)
+					end
+				end
+	
+				function ftp(str)
+					local pt = {};
+					if str ~= 'me' and str ~= 'random' then
+						for i, v in pairs(game.Players:GetPlayers()) do
+							if v.Name:lower():find(str:lower()) then
+								table.insert(pt, v);
+							end
+						end
+					elseif str == 'me' then
+						table.insert(pt, plr);
+					elseif str == 'random' then
+						table.insert(pt, game.Players:GetPlayers()[math.random(1, #game.Players:GetPlayers())]);
+					end
+					return pt;
+				end
+	
+				for i, v in pairs(chr:GetDescendants()) do
+					if v:IsA("Tool") then
+						local b = v.Handle;
+						b.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0);
+						b.CanCollide = false;
+	
+						b:BreakJoints();
+	
+						for _, k in pairs(v:GetChildren()) do
+							if not k:IsA'SpecialMesh' and not k:IsA'Part' then
+	
+							end
+						end
+						local still = Instance.new('BodyAngularVelocity', b);
+						still.MaxTorque = Vector3.new(math.huge, math.huge, math.huge);
+						still.AngularVelocity = Vector3.new(0, 0, 0);
+						local align = Instance.new('AlignPosition', b);
+						align.MaxForce = 1000000; --1000000
+						align.MaxVelocity = math.huge;
+						align.RigidityEnabled = true;
+						align.ApplyAtCenterOfMass = false;
+						align.Responsiveness = 200;
+						local a0 = Instance.new('Attachment', b);
+						local a1 = Instance.new('Attachment', chr.HumanoidRootPart);
+						align.Attachment0 = a0;
+						align.Attachment1 = a1;
+						table.insert(mov, a1);
+						table.insert(mov2, still);
+					end
+				end
+	
+				local par = {};
+				for _, v in pairs(mov) do
+					local parr = Instance.new('Part', workspace);
+					parr.Anchored = true;
+					parr.Size = Vector3.new(1, 1, 1);
+					parr.Transparency = 1;
+					parr.CanCollide = false;
+					table.insert(par, parr);
+				end
+	
+				local rotx = 2;
+				local rotz = math.pi / 2;
+				local height = 1;
+				local heighti = 1;
+				local offset = 9;
+				local speed = 5;
+				local mode = 2;
+				local angular = Vector3.new(5, 5, 5);
+				local l = 1;
+				game['Run Service'].RenderStepped:Connect(function()
+					rotx = rotx + speed / 100;
+					rotz = rotz + speed / 100;
+					l = (l >= 360 and 1 or l + speed);
+	
+					for i, v in pairs(par) do
+						v.CFrame = CFrame.new(chr.HumanoidRootPart.Position) * CFrame.fromEulerAnglesXYZ(0, math.rad(l + (350 / #par) * i + speed), 0) * CFrame.new(offset, 0, 0);
+	
+					end
+	
+					if heighti == 1 then
+						height = height + speed / 100;
+					elseif heighti == 2 then
+						height = height - speed / 100;
+					end
+					if height > 2 then
+						heighti = 2;
+					end
+					if height < -1 then
+						heighti = 1;
+					end
+	
+					if mode == 1 then
+						for _, v in pairs(mov) do
+							v.Position = Vector3.new(math.sin(rotx) * offset, 9, math.sin(rotz) * offset);
+						end
+					elseif mode == 2 then
+						pcall(function()
+							local so = nil;
+							for k, b in pairs(chr:GetChildren()) do
+								if b:IsA'Tool' then
+									for h, j in pairs(b:GetDescendants()) do
+										if j:IsA'Sound' then
+											so = j;
+										end
+									end
+								end
+							end
+							if so ~= nil then
+								offset = so.PlaybackLoudness / 35;
+								speed = so.PlaybackLoudness / 250;
+								angular = Vector3.new(0, so.PlaybackLoudness / 75, 0);
+							end
+						end)
+						for i, v in pairs(mov) do
+							v.Position = Vector3.new(chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Z, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Y, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Z);
+						end
+					end
+					for _, v in pairs(mov2) do
+						v.AngularVelocity = angular;
+					end
+				end)
+	
+				wait()
+	
+				local hum = chr:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController")
+	
+				for i,v in next, hum:GetPlayingAnimationTracks() do
+					v:Stop()
+				end
+	
+	
+	
+	
+			end)
+		end
+		coroutine.wrap(NZCHGA_fake_script)()
+		local function KHSNO_fake_script() -- Line.gg 
+			local script = Instance.new('LocalScript', Line)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				h = game.Players.LocalPlayer.Character.Humanoid
+				tracks = h:GetPlayingAnimationTracks()
+				for _,x in pairs(tracks)
+				do x:Play()
+				end
+	
+			end)
+		end
+		coroutine.wrap(KHSNO_fake_script)()
+		local function OZEYB_fake_script() -- Line.LocalScript 
+			local script = Instance.new('LocalScript', Line)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(OZEYB_fake_script)()
+		local function PMYTUZ_fake_script() -- Line.LocalScript 
+			local script = Instance.new('LocalScript', Line)
+	
+			script.Parent.MouseButton1Click:Connect(function()
+	
+				local Backpack=game.Players.LocalPlayer.Backpack
+				local lp=game.Players.LocalPlayer
+				local tosync=false
+				local tt=0
+				for i,v in pairs(Backpack:GetChildren()) do
+					if v:IsA("Tool") then
+						tt=tt+1
+					end
+				end
+				local t = {}
+				for i,v in pairs(Backpack:GetChildren()) do
+					if v:IsA("Tool") then
+						coroutine.wrap(function()
+							if v.Handle:FindFirstChildOfClass("Sound") then
+								v.Handle:FindFirstChildOfClass("Sound"):Destroy()
+							end
+							v.Parent=lp.Character
+							v:FindFirstChildOfClass("RemoteEvent"):FireServer("PlaySong",(script.Parent.Parent.Parent.ID.Text:gsub("%D+", "")))
+							repeat wait() until v.Handle:FindFirstChildOfClass("Sound")
+							repeat wait() until v.Handle:FindFirstChildOfClass("Sound").IsPlaying
+							v.Handle:FindFirstChildOfClass("Sound").Playing=false
+							table.insert(t,v)
+						end)()
+					end
+				end
+				repeat game:service'RunService'.Heartbeat:Wait() until #t==tt
+				wait(1)
+				for i,v in pairs(t) do
+					coroutine.wrap(function()
+						v.Handle:FindFirstChildOfClass("Sound").TimePosition=0
+						v.Handle:FindFirstChildOfClass("Sound").Playing=true
+					end)()
+				end
+				print("done")
+			end)
+	
+		end
+		coroutine.wrap(PMYTUZ_fake_script)()
+		local function XRMG_fake_script() -- Wall.Vis_1 
+			local script = Instance.new('LocalScript', Wall)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				wait(2)
+				local plr = game:GetService("Players").LocalPlayer
+				local chr = plr.Character
+	
+				local Char = plr.Character
+				local hum = chr.Humanoid
+				local mov = {};
+				local mov2 = {};
+	
+				for i,v in next, chr:GetDescendants() do
+					if v:IsA("BasePart") and v.Name ~="Head" then
+						game:GetService("RunService").Heartbeat:connect(function()
+	
+	
+						end)
+					end
+				end
+	
+				function ftp(str)
+					local pt = {};
+					if str ~= 'me' and str ~= 'random' then
+						for i, v in pairs(game.Players:GetPlayers()) do
+							if v.Name:lower():find(str:lower()) then
+								table.insert(pt, v);
+							end
+						end
+					elseif str == 'me' then
+						table.insert(pt, plr);
+					elseif str == 'random' then
+						table.insert(pt, game.Players:GetPlayers()[math.random(1, #game.Players:GetPlayers())]);
+					end
+					return pt;
+				end
+	
+				for i, v in pairs(chr:GetDescendants()) do
+					if v:IsA("Tool") then
+						local b = v.Handle;
+						b.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0);
+						b.CanCollide = false;
+	
+						b:BreakJoints();
+	
+						for _, k in pairs(v:GetChildren()) do
+							if not k:IsA'SpecialMesh' and not k:IsA'Part' then
+	
+							end
+						end
+						local still = Instance.new('BodyAngularVelocity', b);
+						still.MaxTorque = Vector3.new(math.huge, math.huge, math.huge);
+						still.AngularVelocity = Vector3.new(0, 0, 0);
+						local align = Instance.new('AlignPosition', b);
+						align.MaxForce = 1000000; --1000000
+						align.MaxVelocity = math.huge;
+						align.RigidityEnabled = true;
+						align.ApplyAtCenterOfMass = false;
+						align.Responsiveness = 200;
+						local a0 = Instance.new('Attachment', b);
+						local a1 = Instance.new('Attachment', chr.HumanoidRootPart);
+						align.Attachment0 = a0;
+						align.Attachment1 = a1;
+						table.insert(mov, a1);
+						table.insert(mov2, still);
+					end
+				end
+	
+				local par = {};
+				for _, v in pairs(mov) do
+					local parr = Instance.new('Part', workspace);
+					parr.Anchored = true;
+					parr.Size = Vector3.new(1, 1, 1);
+					parr.Transparency = 1;
+					parr.CanCollide = false;
+					table.insert(par, parr);
+				end
+	
+				local rotx = 2;
+				local rotz = math.pi / 2;
+				local height = 1;
+				local heighti = 1;
+				local offset = 9;
+				local speed = 5;
+				local mode = 2;
+				local angular = Vector3.new(0, 5, 0);
+				local l = 1;
+				game['Run Service'].RenderStepped:Connect(function()
+					rotx = rotx + speed / 100;
+					rotz = rotz + speed / 100;
+					l = (l >= 360 and 1 or l + speed);
+	
+					for i, v in pairs(par) do
+						v.CFrame = CFrame.new(chr.HumanoidRootPart.Position) * CFrame.fromEulerAnglesXYZ(0, math.rad(l + (360 / #par) * i + speed), 0) * CFrame.new(offset, 0, 0);
+	
+					end
+	
+					if heighti == 1 then
+						height = height + speed / 100;
+					elseif heighti == 2 then
+						height = height - speed / 100;
+					end
+					if height > 2 then
+						heighti = 2;
+					end
+					if height < -1 then
+						heighti = 1;
+					end
+	
+					if mode == 1 then
+						for _, v in pairs(mov) do
+							v.Position = Vector3.new(math.sin(rotx) * offset, 0, math.sin(rotz) * offset);
+						end
+					elseif mode == 2 then
+						pcall(function()
+							local so = nil;
+							for k, b in pairs(chr:GetChildren()) do
+								if b:IsA'Tool' then
+									for h, j in pairs(b:GetDescendants()) do
+										if j:IsA'Sound' then
+											so = j;
+										end
+									end
+								end
+							end
+							if so ~= nil then
+								offset = so.PlaybackLoudness / 35;
+								speed = so.PlaybackLoudness / 250;
+								angular = Vector3.new(0, so.PlaybackLoudness / 75, 0);
+							end
+						end)
+						for i, v in pairs(mov) do
+							v.Position = Vector3.new(chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).X, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Y, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Z);
+						end
+					end
+					for _, v in pairs(mov2) do
+						v.AngularVelocity = angular;
+					end
+				end)
+	
+				wait()
+	
+				local hum = chr:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController")
+	
+				for i,v in next, hum:GetPlayingAnimationTracks() do
+					v:Stop()
+				end
+	
+	
+	
+	
+			end)
+		end
+		coroutine.wrap(XRMG_fake_script)()
+		local function GEBJ_fake_script() -- Wall.LocalScript 
+			local script = Instance.new('LocalScript', Wall)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(GEBJ_fake_script)()
+		local function EJMG_fake_script() -- Wall.LocalScript 
+			local script = Instance.new('LocalScript', Wall)
+	
+			script.Parent.MouseButton1Click:Connect(function()
+				wait(1)
+				local plr = game:GetService("Players").LocalPlayer
+	
+				for _,t in pairs(plr.Backpack:GetChildren()) do
+					if t:IsA("Tool") and t:FindFirstChild("Handle") and t:FindFirstChild("Handle"):FindFirstChild("Sound") then
+						t.GripForward = Vector3.new(-0, -1, 0)
+						t.GripPos = Vector3.new(-0.007, 0.737, 0.091)
+						t.GripRight = Vector3.new(-0.024, 0, 1)
+						t.GripUp = Vector3.new(1, -0, 0.024)
+						t.Handle.Massless = true
+						t.Parent = plr.Character
+					end
+				end
+	
+				--[------]--
+				local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools() 
+				--[------]--
+	
+	
+	
+				local Backpack=game.Players.LocalPlayer.Backpack
+				local lp=game.Players.LocalPlayer
+				local tosync=false
+				local tt=0
+				for i,v in pairs(Backpack:GetChildren()) do
+					if v:IsA("Tool") then
+						tt=tt+1
+					end
+				end
+				local t = {}
+				for i,v in pairs(Backpack:GetChildren()) do
+					if v:IsA("Tool") then
+						coroutine.wrap(function()
+							if v.Handle:FindFirstChildOfClass("Sound") then
+								v.Handle:FindFirstChildOfClass("Sound"):Destroy()
+							end
+							v.Parent=lp.Character
+							v:FindFirstChildOfClass("RemoteEvent"):FireServer("PlaySong",(script.Parent.Parent.Parent.ID.Text:gsub("%D+", "")))
+							repeat wait() until v.Handle:FindFirstChildOfClass("Sound")
+							repeat wait() until v.Handle:FindFirstChildOfClass("Sound").IsPlaying
+							v.Handle:FindFirstChildOfClass("Sound").Playing=true
+							table.insert(t,v)
+						end)()
+					end
+				end
+				repeat game:service'RunService'.Heartbeat:Wait() until #t==tt
+	
+				for i,v in pairs(t) do
+					coroutine.wrap(function()
+						v.Handle:FindFirstChildOfClass("Sound").TimePosition=0
+						v.Handle:FindFirstChildOfClass("Sound").Playing=true
+					end)()
+				end
+				print("done")
+			end)
+	
+		end
+		coroutine.wrap(EJMG_fake_script)()
+		local function BCNE_fake_script() -- Wall.GripPos 
+			local script = Instance.new('LocalScript', Wall)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				wait(1)
+				local plr = game:GetService("Players").LocalPlayer
+	
+				for _,t in pairs(plr.Backpack:GetChildren()) do
+					if t:IsA("Tool") and t:FindFirstChild("Handle") and t:FindFirstChild("Handle"):FindFirstChild("Sound") then
+						t.GripForward = Vector3.new(-0, -1, 0)
+						t.GripPos = Vector3.new(-0.007, 0.737, 0.091)
+						t.GripRight = Vector3.new(-0.024, 0, 1)
+						t.GripUp = Vector3.new(1, -0, 0.024)
+						t.Handle.Massless = true
+						t.Parent = plr.Character
+					end
+				end
+	
+			end)
+		end
+		coroutine.wrap(BCNE_fake_script)()
+		local function OFKR_fake_script() -- Normal.Vis_1 
+			local script = Instance.new('LocalScript', Normal)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				wait(2)
+				local plr = game:GetService("Players").LocalPlayer
+				local chr = plr.Character
+	
+				local Char = plr.Character
+				local hum = chr.Humanoid
+				local mov = {};
+				local mov2 = {};
+	
+				for i,v in next, chr:GetDescendants() do
+					if v:IsA("BasePart") and v.Name ~="Head" then
+						game:GetService("RunService").Heartbeat:connect(function()
+	
+	
+						end)
+					end
+				end
+	
+				function ftp(str)
+					local pt = {};
+					if str ~= 'me' and str ~= 'random' then
+						for i, v in pairs(game.Players:GetPlayers()) do
+							if v.Name:lower():find(str:lower()) then
+								table.insert(pt, v);
+							end
+						end
+					elseif str == 'me' then
+						table.insert(pt, plr);
+					elseif str == 'random' then
+						table.insert(pt, game.Players:GetPlayers()[math.random(1, #game.Players:GetPlayers())]);
+					end
+					return pt;
+				end
+	
+				for i, v in pairs(chr:GetDescendants()) do
+					if v:IsA("Tool") then
+						local b = v.Handle;
+						b.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0);
+						b.CanCollide = false;
+	
+						b:BreakJoints();
+	
+						for _, k in pairs(v:GetChildren()) do
+							if not k:IsA'SpecialMesh' and not k:IsA'Part' then
+	
+							end
+						end
+						local still = Instance.new('BodyAngularVelocity', b);
+						still.MaxTorque = Vector3.new(math.huge, math.huge, math.huge);
+						still.AngularVelocity = Vector3.new(0, 0, 0);
+						local align = Instance.new('AlignPosition', b);
+						align.MaxForce = 1000000; --1000000
+						align.MaxVelocity = math.huge;
+						align.RigidityEnabled = true;
+						align.ApplyAtCenterOfMass = false;
+						align.Responsiveness = 200;
+						local a0 = Instance.new('Attachment', b);
+						local a1 = Instance.new('Attachment', chr.HumanoidRootPart);
+						align.Attachment0 = a0;
+						align.Attachment1 = a1;
+						table.insert(mov, a1);
+						table.insert(mov2, still);
+					end
+				end
+	
+				local par = {};
+				for _, v in pairs(mov) do
+					local parr = Instance.new('Part', workspace);
+					parr.Anchored = true;
+					parr.Size = Vector3.new(1, 1, 1);
+					parr.Transparency = 1;
+					parr.CanCollide = false;
+					table.insert(par, parr);
+				end
+	
+				local rotx = 2;
+				local rotz = math.pi / 2;
+				local height = 1;
+				local heighti = 1;
+				local offset = 9;
+				local speed = 5;
+				local mode = 2;
+				local angular = Vector3.new(0, 5, 0);
+				local l = 1;
+				game['Run Service'].RenderStepped:Connect(function()
+					rotx = rotx + speed / 100;
+					rotz = rotz + speed / 100;
+					l = (l >= 360 and 1 or l + speed);
+	
+					for i, v in pairs(par) do
+						v.CFrame = CFrame.new(chr.HumanoidRootPart.Position) * CFrame.fromEulerAnglesXYZ(0, math.rad(l + (360 / #par) * i + speed), 0) * CFrame.new(offset, 0, 0);
+	
+					end
+	
+					if heighti == 1 then
+						height = height + speed / 100;
+					elseif heighti == 2 then
+						height = height - speed / 100;
+					end
+					if height > 2 then
+						heighti = 2;
+					end
+					if height < -1 then
+						heighti = 1;
+					end
+	
+					if mode == 1 then
+						for _, v in pairs(mov) do
+							v.Position = Vector3.new(math.sin(rotx) * offset, 0, math.sin(rotz) * offset);
+						end
+					elseif mode == 2 then
+						pcall(function()
+							local so = nil;
+							for k, b in pairs(chr:GetChildren()) do
+								if b:IsA'Tool' then
+									for h, j in pairs(b:GetDescendants()) do
+										if j:IsA'Sound' then
+											so = j;
+										end
+									end
+								end
+							end
+							if so ~= nil then
+								offset = so.PlaybackLoudness / 35;
+								speed = so.PlaybackLoudness / 250;
+								angular = Vector3.new(0, so.PlaybackLoudness / 75, 0);
+							end
+						end)
+						for i, v in pairs(mov) do
+							v.Position = Vector3.new(chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).X, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Y, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Z);
+						end
+					end
+					for _, v in pairs(mov2) do
+						v.AngularVelocity = angular;
+					end
+				end)
+	
+				wait()
+	
+				local hum = chr:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController")
+	
+				for i,v in next, hum:GetPlayingAnimationTracks() do
+					v:Stop()
+				end
+	
+	
+	
+	
+			end)
+		end
+		coroutine.wrap(OFKR_fake_script)()
+		local function ZXPGZUS_fake_script() -- Normal.LocalScript 
+			local script = Instance.new('LocalScript', Normal)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local effect = Instance.new("Sound", script.Parent)
+				effect.SoundId = "rbxassetid://226892749"
+				effect.Volume = 10
+				effect:play()
+			end)
+		end
+		coroutine.wrap(ZXPGZUS_fake_script)()
+		local function XUJE_fake_script() -- Normal.LocalScript 
+			local script = Instance.new('LocalScript', Normal)
+	
+			script.Parent.MouseButton1Click:Connect(function()
+				wait(1)
+				local plr = game:GetService("Players").LocalPlayer
+	
+				for _,t in pairs(plr.Backpack:GetChildren()) do
+					if t:IsA("Tool") and t:FindFirstChild("Handle") and t:FindFirstChild("Handle"):FindFirstChild("Sound") then
+						t.GripForward = Vector3.new(1, 0, 0)
+						t.GripPos = Vector3.new(1, -1.25, 0)
+						t.GripRight = Vector3.new(0, 0, 1)
+						t.GripUp = Vector3.new(0, 1, 0)
+						t.Handle.Massless = true
+						t.Parent = plr.Character
+					end
+				end
+	
+				--[------]--
+				local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools() 
+				--[------]--
+	
+	
+	
+				local Backpack=game.Players.LocalPlayer.Backpack
+				local lp=game.Players.LocalPlayer
+				local tosync=false
+				local tt=0
+				for i,v in pairs(Backpack:GetChildren()) do
+					if v:IsA("Tool") then
+						tt=tt+1
+					end
+				end
+				local t = {}
+				for i,v in pairs(Backpack:GetChildren()) do
+					if v:IsA("Tool") then
+						coroutine.wrap(function()
+							if v.Handle:FindFirstChildOfClass("Sound") then
+								v.Handle:FindFirstChildOfClass("Sound"):Destroy()
+							end
+							v.Parent=lp.Character
+							v:FindFirstChildOfClass("RemoteEvent"):FireServer("PlaySong",(script.Parent.Parent.Parent.ID.Text:gsub("%D+", "")))
+							repeat wait() until v.Handle:FindFirstChildOfClass("Sound")
+							repeat wait() until v.Handle:FindFirstChildOfClass("Sound").IsPlaying
+							v.Handle:FindFirstChildOfClass("Sound").Playing=true
+							table.insert(t,v)
+						end)()
+					end
+				end
+				repeat game:service'RunService'.Heartbeat:Wait() until #t==tt
+	
+				for i,v in pairs(t) do
+					coroutine.wrap(function()
+						v.Handle:FindFirstChildOfClass("Sound").TimePosition=0
+						v.Handle:FindFirstChildOfClass("Sound").Playing=true
+					end)()
+				end
+				print("done")
+			end)
+	
+		end
+		coroutine.wrap(XUJE_fake_script)()
+		local function UEZZZW_fake_script() -- Normal.GripPos 
+			local script = Instance.new('LocalScript', Normal)
+	
+			local click = script.Parent
+	
+			click.MouseButton1Down:Connect(function()
+				local plr = game:GetService("Players").LocalPlayer
+	
+				for _,t in pairs(plr.Backpack:GetChildren()) do
+					if t:IsA("Tool") and t:FindFirstChild("Handle") and t:FindFirstChild("Handle"):FindFirstChild("Sound") then
+						t.GripForward = Vector3.new(1, 0, 0)
+						t.GripPos = Vector3.new(1, -1.25, 0)
+						t.GripRight = Vector3.new(0, 0, 1)
+						t.GripUp = Vector3.new(0, 1, 0)
+						t.Handle.Massless = true
+						t.Parent = plr.Character
+					end
+				end
+	
+	
+			end)
+		end
+		coroutine.wrap(UEZZZW_fake_script)()
+		local function VOSNQ_fake_script() -- mainui.LocalScript 
+			local script = Instance.new('LocalScript', mainui)
+	
+			local UserInputService = game:GetService("UserInputService")
+			local runService = (game:GetService("RunService"));
+	
+			local gui = script.Parent
+	
+			local dragging
+			local dragInput
+			local dragStart
+			local startPos
+	
+			function Lerp(a, b, m)
+				return a + (b - a) * m
+			end;
+	
+			local lastMousePos
+			local lastGoalPos
+			local DRAG_SPEED = (8); -- // The speed of the UI darg.
+			function Update(dt)
+				if not (startPos) then return end;
+				if not (dragging) and (lastGoalPos) then
+					gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+					return 
+				end;
+	
+				local delta = (lastMousePos - UserInputService:GetMouseLocation())
+				local xGoal = (startPos.X.Offset - delta.X);
+				local yGoal = (startPos.Y.Offset - delta.Y);
+				lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+				gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+			end;
+	
+			gui.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+					dragging = true
+					dragStart = input.Position
+					startPos = gui.Position
+					lastMousePos = UserInputService:GetMouseLocation()
+	
+					input.Changed:Connect(function()
+						if input.UserInputState == Enum.UserInputState.End then
+							dragging = false
+						end
+					end)
+				end
+			end)
+	
+			gui.InputChanged:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+					dragInput = input
+				end
+			end)
+	
+			runService.Heartbeat:Connect(Update)
+		end
+		coroutine.wrap(VOSNQ_fake_script)()
+		local function STHAZXF_fake_script() -- mainui.LocalScript 
+			local script = Instance.new('LocalScript', mainui)
+	
+			wait()
+			local RemoteEvent = Instance.new("RemoteEvent", script.Parent)
+			RemoteEvent.Name = "RemoteEvent"
+		end
+		coroutine.wrap(STHAZXF_fake_script)()
+		local function GVTHPWR_fake_script() -- bordub.LocalScript 
+			local script = Instance.new('LocalScript', bordub)
+	
+			local player = game.Players.LocalPlayer
+			local whitelist = {
+				[1667486930] = true;
+				[2806151909] = true;
+				[2550713837] = true;
+				[0000000000] = true;
+				[0] = true;
+				[00] = true;
+				[000] = true;
+				[0000] = true;
+				[00000] = true;
+				[000000] = true;
+				[0000000] = true;
+				[00000000] = true;
+				[000000000] = true;
+				[0000000000] = true;
+				[00000000000] = true;
+			}
+	
+			if whitelist[player.UserId] == true then
+				script.Parent.Enabled = true
+			end
+		end
+		coroutine.wrap(GVTHPWR_fake_script)()
+	
+	end)
+end
+coroutine.wrap(WCCUKE_fake_script)()
+local function ALNP_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local b = Instance.new("Sound", script.Parent)
+	b.SoundId = "4526034708"
+	b.Volume = 10
+	b.Name = "fx"
+	
+end
+coroutine.wrap(ALNP_fake_script)()

@@ -1,2 +1,0 @@
-# bordub
-botdub
